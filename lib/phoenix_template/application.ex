@@ -11,7 +11,7 @@ defmodule PhoenixTemplate.Application do
       # Start the Ecto repository
       PhoenixTemplate.Repo,
       # Start the endpoint when the application starts
-      PhoenixTemplateWeb.Endpoint,
+      PhoenixTemplateWeb.Endpoint
       # Starts a worker by calling: PhoenixTemplate.Worker.start_link(arg)
       # {PhoenixTemplate.Worker, arg},
     ]

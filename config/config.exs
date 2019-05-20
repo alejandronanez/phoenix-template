@@ -14,8 +14,7 @@ config :phoenix_template, PhoenixTemplateWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "27hwHf1yukIe7Z5cEQ8Qtt32lB6TIvB9/V0s34xrZxBg7sPXkdehlm7RxSG5dvkH",
   render_errors: [view: PhoenixTemplateWeb.ErrorView, accepts: ~w(json)],
-  pubsub: [name: PhoenixTemplate.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: PhoenixTemplate.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
@@ -26,7 +25,6 @@ config :logger, :console,
 config :phoenix, :json_library, Jason
 config :ecto, :json_library, Jason
 
-
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
-import_config "#{Mix.env}.exs"
+import_config "#{Mix.env()}.exs"
